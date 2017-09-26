@@ -41,7 +41,7 @@ app.post('/generateSession', function (req, res) {
      var photosetStr = JSON.stringify(photoset, null, 4);
      console.log('photoset:'+photosetStr);
      var photosetFile = {
-       route: '_data/',
+       route: '_data/photosets/',
        name:  photoset.id+'.json',
        content: photosetStr
      }
@@ -50,7 +50,7 @@ app.post('/generateSession', function (req, res) {
           console.log('Error generating the post file: '+err);
         } else {
           var postFile = {
-            route: '_posts/photosets/',
+            route: '_posts/',
             name:  fileName+'.md',
             content: post
           }
