@@ -196,6 +196,9 @@ function getPhotoset(galleryid, callback) {
       authenticated: true
 		}, function(err, result) {
       console.log('Obtained photos? '+ result);
+      if (err) {
+        console.log('Error obtaining photos: '+err)
+      }
 			if (result) {
 
         var photosetInfo = {
