@@ -264,7 +264,7 @@ function getPhotoset(galleryid, callback) {
 	});
 }
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || '3000');
 app.listen(port, function () {
   console.log('Session Generator listening on port '+port);
 });
